@@ -1,0 +1,62 @@
+<!--<div style="background:{{config.color}}">  -->
+<!--<div [ngStyle]="{
+				'background': config.fondo,
+				'padding': '20px',
+				'border': '5px solid black',
+				'border-color': config.color
+			}"> -->  <!--Estilo 2 creado en curso Javascript-->
+
+<!-- ============================================================== -->
+<!-- Main wrapper - Importado Omega style you can find in pages.scss -->
+<!-- ============================================================== -->	
+
+<div id="main-wrapper">	
+	<!--Componente Header creado e importado Omega-->
+	<app-header></app-header>
+	<!--Componente Sidebar creado e importado Omega-->
+	<app-sidebar></app-sidebar>
+
+	<div class="page-wrapper">
+		    <!-- ============================================================== -->
+            <!-- Container fluid Importado Omega -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">	
+            	<!--Breadcrumbs importado Omega-->
+            	<app-breadcrumbs></app-breadcrumbs>
+            	<!--Sistema de rutas-->
+                <!-- ============================================================== -->
+                <!-- Start Page Content Importado Omega-->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body" style="background:{{config.fondo}}">
+								<!--Titulo y descripcion que llegan desde models/configuracion.ts Se ocultaba si esta activo Header Omega-->
+								<!-- <h1>
+									{{title}}!       Variable definida en app.componet.ts y toma su valor de models/configuracion.ts     
+								</h1>         
+								<p>{{descripcion}}</p>
+								-->  
+								
+								<!--  Primeros componentes curso javascript
+								<button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">Ocultar Videojuegos</button>
+								<button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">Mostrar Videojuegos</button>
+								<videojuego *ngIf="mostrar_videojuegos"></videojuego>
+								<tenis></tenis>-->
+
+								<router-outlet></router-outlet>
+
+								
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                © 2021 SM8 Versión Omega: 4.5.6.7 www.sm8.com.mx
+            </footer>
+	</div>
+
+</div>
+
+<router-outlet></router-outlet>
