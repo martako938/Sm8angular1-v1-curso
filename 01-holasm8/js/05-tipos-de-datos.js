@@ -2,6 +2,8 @@
 
 //Operadores
 
+// + - * / % resto de division
+
 var numero1 =5;
 var numero2 =12;
 var operacion = numero1 * numero2;
